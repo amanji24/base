@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <title>Insert Title Here</title>
+        <link href="styles.css" rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    
+    <body>
+    
+        <center><h1>Welcome</h1>
+        <p>Created by Adam Manji</p></center>
+        
+        <br><hr><br>
+        
+        <center><h3>Buttons:</h3><br></center>
+        
+        <center><button class='coolButton' onclick='about()'><h2>About</h2></button></center>
+        <div id='aboutDiv' style='display: none'>
+        <br>
+        <p>This is an example web page. It has some CSS, or style, and contains some cool HTML features such as links, buttons, etc.</p>
+        <p>This page was created to demonstrate the abilities of simple/basic HTML and CSS and how they can make a cool looking webpage. </p>
+        </div>
+        
+        <br><br>
+        
+        <center>
+            
+        <button class='coolButton' onclick='alert("Welcome to my page! This button is using JS to send an alert, but the JS is inline, so hopefully nobody notices.")'>Hover && Click</button>
+        
+        
+        <br><br><hr><br>
+        
+        This is a [bad] table: <br><br>
+        
+        <table>
+          
+        <th>Data</th><th>More data</th><th>...</th>
+        <tr><td>This</td><td>table</td><td>can</td></tr>
+        <tr><td>store</td><td>data</td><td>:)</td></tr>
+        
+        </table>
+            
+        <br><br><hr><br>
+            
+        <p>Mobile Compatible</p>
+            
+        </center>
+        
+        <script>
+        
+            aboutCount = 0;
+            
+        function about() {
+           
+            aboutDiv = document.getElementById('aboutDiv');
+            
+            if (aboutCount % 2 == 0) {
+                aboutDiv.style.display = 'block';
+            } else {
+                aboutDiv.style.display = 'none';
+            }
+            
+            aboutCount++;
+            
+        }
+        
+        </script>
+        
+    </body>
+
+</html>
