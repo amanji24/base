@@ -4,34 +4,49 @@
 
     <head>
     
-        <title>Insert Title Here</title>
+        <title>*Insert Title Here*</title>
         <link href="styles.css" rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+        
+            table {
+                border-collapse: collapse;
+            }
+            tr,th {
+                padding: 7.5px;
+                text-align: center;
+            }
+            
+        </style>
         
     </head>
     
     <body>
     
-        <center><h1>Welcome</h1>
+        <center><br>
+        
+        <div id='time'></div>
+        
+        <h1>Welcome</h1>
         <p>Created by Adam Manji</p></center>
         
         <br><hr><br>
         
         <center><h3>Buttons:</h3><br></center>
         
-        <center><button class='coolButton' onclick='about()'><h2>About</h2></button></center>
-        <div id='aboutDiv' style='display: none'>
+        <center><button class='coolButton' onclick='about()'><h2>About</h2></button>
+        <div id='aboutDiv' style='display: none; text-align: left;'>
         <br>
         <p>This is an example web page. It has some CSS, or style, and contains some cool HTML features such as links, buttons, etc.</p>
         <p>This page was created to demonstrate the abilities of simple/basic HTML and CSS and how they can make a cool looking webpage. </p>
-        </div>
+        </div></center>
         
         <br><br>
         
         <center>
             
         <button class='coolButton' onclick='alert("Welcome to my page! This button is using JS to send an alert, but the JS is inline, so hopefully nobody notices.")'>Hover && Click</button>
-        
         
         <br><br><hr><br>
         
@@ -45,7 +60,7 @@
         
         </table>
             
-        <br><br><hr><br>
+        <br><hr><br>
             
         <p>Mobile Compatible</p>
             
@@ -68,6 +83,18 @@
             aboutCount++;
             
         }
+            
+        function setTime() {
+            
+            timeDiv = document.getElementById('time');
+            time = new Date().toString();
+            timeDiv.innerHTML = "<p>" + time.substring(4,15) + " || " + time.substring(16,24) + "</p>";
+            
+        }
+            
+        setTime();
+            
+        setInterval(setTime,1000);
         
         </script>
         
